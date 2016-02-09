@@ -8,5 +8,5 @@ before_build:
   - nuget restore
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
-build:
-  project: PlaceholderFallback.sln
+build_script:
+  msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:PackageVersion=$(GitVersion_SemVer)
