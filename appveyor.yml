@@ -14,12 +14,9 @@ platform: Any CPU
 # build Configuration, i.e. Debug, Release, etc.
 configuration: Release
 
-# MSBuild verbosity level (quiet|minimal|normal|detailed)
-verbosity: detailed
-
 build_script:
   - cmd: set PackageVersion=%GitVersion_SemVer%
-  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /verbosity:detailed
 
 before_build:
   - nuget restore
