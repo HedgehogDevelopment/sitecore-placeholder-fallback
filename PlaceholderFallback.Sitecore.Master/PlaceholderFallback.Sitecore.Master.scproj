@@ -50,9 +50,10 @@
     <PackageName>PlaceholderFallback</PackageName>
     <PackageAuthor>Hedgehog Development</PackageAuthor>
     <PackagePublisher>Hedgehog Development</PackagePublisher>
-    <PackageVersion>x.x.x</PackageVersion>
+    <PackageVersion>0.0.1</PackageVersion>
     <PackageReadme />
-    <SitecoreAssemblyPath>..\packages\SitecoreKernel.8.0.0.141212\lib\</SitecoreAssemblyPath>
+    <SitecoreAssemblyPath>
+    </SitecoreAssemblyPath>
     <GeneratePackage>True</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
     <PackageExcludeCode>False</PackageExcludeCode>
@@ -118,11 +119,11 @@
     <Content Include="C:\GitHub\HedgehogDevelopment\sitecore-placeholder-fallback\PlaceholderFallback.Sitecore.Master\packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
-  <Import Project="..\packages\HedgehogDevelopment.TDS.5.1.0.31\build\HedgehogDevelopment.TDS.targets" Condition="Exists('..\packages\HedgehogDevelopment.TDS.5.1.0.31\build\HedgehogDevelopment.TDS.targets')" />
+  <Import Project="..\packages\HedgehogDevelopment.TDS.5.1.0.32\build\HedgehogDevelopment.TDS.targets" Condition="Exists('..\packages\HedgehogDevelopment.TDS.5.1.0.32\build\HedgehogDevelopment.TDS.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\HedgehogDevelopment.TDS.5.1.0.31\build\HedgehogDevelopment.TDS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HedgehogDevelopment.TDS.5.1.0.31\build\HedgehogDevelopment.TDS.targets'))" />
+    <Error Condition="!Exists('..\packages\HedgehogDevelopment.TDS.5.1.0.32\build\HedgehogDevelopment.TDS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HedgehogDevelopment.TDS.5.1.0.32\build\HedgehogDevelopment.TDS.targets'))" />
   </Target>
 </Project>
