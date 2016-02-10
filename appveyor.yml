@@ -14,19 +14,32 @@ platform: Any CPU
 # build Configuration, i.e. Debug, Release, etc.
 configuration: Release
 
-build_script:
-  - cmd: set PackageVersion=%GitVersion_SemVer%
-  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /verbosity:normal /p:PackageVersion=%GitVersion_SemVer%
-
 before_build:
   - nuget restore
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
+
+build_script:
+  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /verbosity:normal /p:PackageVersion=%GitVersion_SemVer%
 
 #---------------------------------#
 #      artifacts configuration    #
 #---------------------------------#
 artifacts:
 
-  # pushing a single file
   - path: PlaceholderFallback.Sitecore.Master\bin\Package_$(configuration)\PlaceholderFallback.update
   - path: PlaceholderFallback\bin\HedgehogDevelopment.PlaceholderFallback.*
+
+#---------------------------------#
+#      deploy configuration    #
+#---------------------------------#
+deploy:
+  description: 'Placeholder Fallback'
+  provider: GitHub
+  auth_token:
+    secure: ZU0V8xqgN1++PR7PjmsM9KWaGGTHebKDm0FHdPKvvzR5rpG60HctmNnM5/pvFDyk # your encrypted token from GitHub
+  artifact: PlaceholderFallback.update
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
