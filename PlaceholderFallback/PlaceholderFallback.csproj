@@ -121,9 +121,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config">
+    <None Include="packages.config">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
     <Content Include="Views\PlaceholderFallback\FallbackRendering.cshtml" />
     <Content Include="App_Config\Include\Z0_Hedgehog\PlaceholderFallback.config" />
   </ItemGroup>
