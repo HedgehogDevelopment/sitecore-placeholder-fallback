@@ -16,7 +16,7 @@ configuration: Release
 
 build_script:
   - cmd: set PackageVersion=%GitVersion_SemVer%
-  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /verbosity:normal
+  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /verbosity:normal /p:PackageVersion=%GitVersion_SemVer%
 
 before_build:
   - nuget restore
