@@ -4,9 +4,32 @@ install:
 nuget:
   account_feed: true
 
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+# build platform, i.e. x86, x64, Any CPU. This setting is optional.
+platform: Any CPU
+
+# build Configuration, i.e. Debug, Release, etc.
+configuration: Release
+
+# MSBuild verbosity level (quiet|minimal|normal|detailed)
+verbosity: detailed
+
+build_script:
+  - cmd: set PackageVersion=%GitVersion_SemVer%
+  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+
 before_build:
   - nuget restore
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
-build_script:
-  - cmd: msbuild PlaceholderFallback.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:PackageVersion=%GitVersion_SemVer%
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+artifacts:
+
+  # pushing a single file
+  - path: PlaceholderFallback.Sitecore.Master\bin\Package_$(configuration)\PlaceholderFallback.update
+  - path: PlaceholderFallback\bin\HedgehogDevelopment.PlaceholderFallback.*
