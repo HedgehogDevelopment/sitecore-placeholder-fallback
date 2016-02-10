@@ -37,7 +37,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: ZU0V8xqgN1++PR7PjmsM9KWaGGTHebKDm0FHdPKvvzR5rpG60HctmNnM5/pvFDyk # your encrypted token from GitHub
-  artifact: PlaceholderFallback.update
+  artifact: /.*\.update/
   draft: false
   prerelease: false
   on:
