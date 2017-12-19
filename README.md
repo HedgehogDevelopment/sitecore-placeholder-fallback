@@ -1,8 +1,11 @@
+<img src="https://www.hhog.com/-/media/PublicImages/Hedgehog/Hedgehog-logo-4color-275x46.jpg" alt="Hedgehog Development" border="0"> 
+
+
 # Sitecore Placeholder Fallback
 
 ## Overview 
 
-This code is documented in this [blog post](http://www.hhogdev.com/blog/2015/september/sitecore-placeholder-fallback.aspx) by Hedgehog Development's Charles Turano. 
+This code is documented in this [blog post](http://www.hhog.com/blog/sitecore-placeholder-fallback/) by Hedgehog Development's Charles Turano. 
 
 When implementing Sitecore websites, sometimes situations arise where the Content Editor wants to personalize or A/B test components that are common to multiple pages in the site. A good example of this is the header and/or navigation components.
 
