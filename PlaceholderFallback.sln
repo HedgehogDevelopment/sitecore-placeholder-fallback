@@ -15,7 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution 
 		GitVersionConfig.yaml = GitVersionConfig.yaml
 		LICENSE.txt = LICENSE.txt
 		NOTICE.txt = NOTICE.txt
-		nuget.config = nuget.config
 		README.md = README.md
 	EndProjectSection
 EndProject

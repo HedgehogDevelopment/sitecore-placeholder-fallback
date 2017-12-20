@@ -1,5 +1,6 @@
 install:
   - choco install gitversion.portable -pre -y
+  - nuget sources add -Name SitecoreNugetFeed -Source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
 
 nuget:
   account_feed: true
@@ -15,7 +16,7 @@ platform: Any CPU
 configuration: Release
 
 before_build:
-  - ps: nuget restore PlaceholderFallback
+  - nuget restore 
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
 build_script:
