@@ -47,38 +47,30 @@
     </CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Lucene.Net.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Sitecore.ItemWebApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Sitecore.Kernel.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.0.141212\lib\NET45\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Sitecore.Logging.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\packages\Sitecore.Logging.NoReferences.8.0.141212\lib\NET45\Sitecore.Logging.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Sitecore.Mvc.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\packages\Sitecore.Mvc.NoReferences.8.0.141212\lib\NET45\Sitecore.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Update, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Sitecore.Update.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\packages\Sitecore.Update.NoReferences.8.0.141212\lib\NET45\Sitecore.Update.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Zip, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SitecoreKernel.8.0.0.141212\lib\Sitecore.Zip.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\packages\Sitecore.Zip.NoReferences.8.0.141212\lib\NET45\Sitecore.Zip.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
