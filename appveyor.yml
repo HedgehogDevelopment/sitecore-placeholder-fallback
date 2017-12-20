@@ -15,7 +15,7 @@ platform: Any CPU
 configuration: Release
 
 before_build:
-  - nuget restore
+  - ps: nuget restore PlaceholderFallback
   - ps: gitversion /l console /output buildserver /updateAssemblyInfo
 
 build_script:
